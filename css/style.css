@@ -253,6 +253,7 @@ form p:last-of-type { display: flex; flex-wrap: wrap; gap: 1rem; align-items: ce
 .cadastro-form .btn-primary {
     background-color: var(--ambar);
     border-color: var(--ambar);
+    color: var(--botao-principal-texto);
     padding: 0.75rem 1.4rem;
     border-radius: 10px;
     font-weight: 600;
@@ -262,6 +263,7 @@ form p:last-of-type { display: flex; flex-wrap: wrap; gap: 1rem; align-items: ce
 .cadastro-form .btn-primary:focus-visible {
     background-color: #b66d1d;
     border-color: #b66d1d;
+    color: var(--texto-cabecalho);
 }
 
 .cadastro-form .btn-outline-secondary {

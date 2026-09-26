@@ -13,6 +13,7 @@
     --botao-secundario-texto: #495057;
     --botao-secundario-borda: #6C757D;
     --botao-secundario-fundo-hover: #6C757D;
+    --botao-principal-texto: #2A2620;
     --borda: rgba(34, 53, 44, 0.2);
     --sucesso-fundo: #E8F5E9;
     --sucesso-borda: #A5D6A7;
@@ -33,6 +34,7 @@ body.dark-mode {
     --botao-secundario-texto: #D5DDD8;
     --botao-secundario-borda: #9CAAA1;
     --botao-secundario-fundo-hover: #718078;
+    --botao-principal-texto: #18231E;
     --borda: rgba(215, 232, 220, 0.25);
     --sucesso-fundo: #213B2A;
     --sucesso-borda: #6FA77B;
