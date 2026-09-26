@@ -1,6 +1,7 @@
 // Ponto principal da SPA: todas as telas são renderizadas dentro desta div.
 const app = document.getElementById('app');
 const CADASTROS_STORAGE_KEY = 'maosQueTransformam.cadastros';
+const THEME_STORAGE_KEY = 'maosQueTransformam.theme';
 
 const views = {
     inicio: {
@@ -644,6 +645,29 @@ function renderView(pageName) {
     }
 }
 
+function applyTheme(isDarkMode) {
+    document.body.classList.toggle('dark-mode', isDarkMode);
+
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) {
+        return;
+    }
+
+    themeToggle.setAttribute('aria-pressed', String(isDarkMode));
+    themeToggle.textContent = isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro';
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    applyTheme(savedTheme === 'dark');
+
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const isDarkMode = !document.body.classList.contains('dark-mode');
+        localStorage.setItem(THEME_STORAGE_KEY, isDarkMode ? 'dark' : 'light');
+        applyTheme(isDarkMode);
+    });
+}
+
 function initNavigation() {
     // Intercepta a navegação: os botões não abrem outra página, apenas chamam renderView().
     const buttons = document.querySelectorAll('.nav-link');
@@ -660,3 +684,4 @@ function initNavigation() {
 
 // Aguarda o HTML inicial existir antes de consultar elementos e registrar eventos.
 document.addEventListener('DOMContentLoaded', initNavigation);
+document.addEventListener('DOMContentLoaded', initTheme);

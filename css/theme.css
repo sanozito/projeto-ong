@@ -1,0 +1,62 @@
+:root {
+    --verde: #22352C;
+    --ambar: #C77B2E;
+    --areia: #EFE8D8;
+    --areia-clara: #F8F4E9;
+    --texto: #2A2620;
+    --superficie: #F8F4E9;
+    --superficie-elevada: rgba(255, 255, 255, 0.45);
+    --superficie-card: #FFFFFF;
+    --superficie-campo: rgba(248, 244, 233, 0.7);
+    --cabecalho: var(--verde);
+    --texto-cabecalho: #F8F4E9;
+    --botao-secundario-texto: #495057;
+    --botao-secundario-borda: #6C757D;
+    --botao-secundario-fundo-hover: #6C757D;
+    --borda: rgba(34, 53, 44, 0.2);
+    --sucesso-fundo: #E8F5E9;
+    --sucesso-borda: #A5D6A7;
+}
+
+body.dark-mode {
+    --verde: #D7E8DC;
+    --ambar: #F0A45B;
+    --areia: #26362E;
+    --areia-clara: #18231E;
+    --texto: #F4F1E8;
+    --superficie: #18231E;
+    --superficie-elevada: rgba(38, 54, 46, 0.92);
+    --superficie-card: #22342B;
+    --superficie-campo: #1D2D25;
+    --cabecalho: #101A16;
+    --texto-cabecalho: #F4F1E8;
+    --botao-secundario-texto: #D5DDD8;
+    --botao-secundario-borda: #9CAAA1;
+    --botao-secundario-fundo-hover: #718078;
+    --borda: rgba(215, 232, 220, 0.25);
+    --sucesso-fundo: #213B2A;
+    --sucesso-borda: #6FA77B;
+}
+
+.theme-toggle {
+    margin-left: auto;
+    border: 1px solid var(--ambar);
+    border-radius: 999px;
+    padding: 0.45rem 0.85rem;
+    background: transparent;
+    color: var(--texto-cabecalho);
+    font: inherit;
+    cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background-color: var(--ambar);
+    color: var(--verde);
+}
+
+@media (max-width: 767px) {
+    .theme-toggle {
+        margin-left: 0;
+    }
+}
