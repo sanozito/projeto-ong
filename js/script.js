@@ -654,7 +654,7 @@ function applyTheme(isDarkMode) {
     }
 
     themeToggle.setAttribute('aria-pressed', String(isDarkMode));
-    themeToggle.textContent = isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro';
+    themeToggle.textContent = isDarkMode ? 'Modo claro' : 'Modo escuro';
 }
 
 function initTheme() {
